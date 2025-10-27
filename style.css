@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+:root {
+    --dark-color: #646464;
+    --light-color: #ebe8e3;
+    --black-color: black;
+}
+
+body {
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    font-family: 'Poppins', sans-serif;
+}
+
+/*scroll-bar*/
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--dark-color);
+}
+::-webkit-scrollbar-track {
+    background: var(--light-color);
+}
+
+/*links*/
+a:link, a:visited {
+    color: var(--dark-color);
+    text-decoration: none;
+}
+
+/*header*/
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: 25px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    height: fit-content;
+    max-width: 100vw;
+}
+
+/*navigation-bar*/
+.nav-bar {
+    display: flex;
+    gap: 0.7rem;
+    list-style: none;
+}
+
+/*tab (responsive)*/
+@media all and (max-width: 768px) {
+    .nav-bar {
+        flex-direction: column;
+        gap: 0.1rem;
+    }
+
+    .contact-btn {
+        font-size: 1.5rem;
+    }
+
+    .home-content {
+        display: flex;
+        flex-direction: column-reverse;
+        font-size: 1rem;
+    }
+
+    .home-content > div:nth-child(3) {
+        display: none;
+    }
+}
