@@ -60,15 +60,92 @@ a:link, a:visited {
         flex-direction: column;
         gap: 0.1rem;
     }
+}
 
+section {
+    height: 100vh;
+    margin: 0 10vw;
+}
+
+/*home*/
+.home {
+    height: 95vh;
+    font-size: 1.5rem;
+    position: fixed;
+    top: 8vh;
+    left: 5vw;
+    right: 5vw;
+    margin: auto;
+    z-index: -1;
+}
+
+.my-name {
+    text-align: center;
+    font-size: 13vw;
+    font-family: "Michroma", sans-serif;
+    font-weight: 900;
+    color: var(--black-color);
+}
+
+.home-content {
+    display: flex;
+    flex-direction: row;
+    gap: 10vw;
+}
+
+.home-content > div {
+    flex: 1;
+}
+
+.home-content > div:nth-child(1) {
+    padding-top: 10vh;
+}
+
+.contact-btn {
+    background: #3a3a3a;
+    margin-top: 10px;
+    width: 150px;
+    height: 50px;
+    border-radius: 50px;
+    text-align: center;
+    font-weight: 500;
+    padding-top: 6px;
+}
+
+.home-content > div:nth-child(2) {
+    text-align: center;
+}
+
+.home-img {
+    width: 100%;
+    max-height: 450px;
+    max-width: 350px;
+    object-fit: cover;
+}
+
+@media all and (max-width: 768px) {
+    .home {
+        padding-top: 30vh;
+    }
     .contact-btn {
         font-size: 1.5rem;
     }
 
     .home-content {
-        display: flex;
         flex-direction: column-reverse;
         font-size: 1rem;
+    }
+
+    .home-content > div:nth-child(1) {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .home-content > div:nth-child(2) {
+        display: none;
     }
 
     .home-content > div:nth-child(3) {
