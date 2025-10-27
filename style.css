@@ -17,6 +17,7 @@ body {
     background-color: var(--light-color);
     color: var(--dark-color);
     font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
 }
 
 /*scroll-bar*/
@@ -35,6 +36,7 @@ a:link, a:visited {
     color: var(--dark-color);
     text-decoration: none;
 }
+
 
 /*header*/
 .header {
@@ -56,6 +58,10 @@ a:link, a:visited {
 
 /*tab (responsive)*/
 @media all and (max-width: 768px) {
+    .header {
+        font-size: 1rem;
+    }
+
     .nav-bar {
         flex-direction: column;
         gap: 0.1rem;
@@ -64,14 +70,16 @@ a:link, a:visited {
 
 section {
     height: 100vh;
-    margin: 0 10vw;
+    padding: 0 10vw;
 }
 
-/*home*/
+
+/*home-page*/
 .home {
     height: 95vh;
     font-size: 1.5rem;
     position: fixed;
+    padding: 0;
     top: 8vh;
     left: 5vw;
     right: 5vw;
@@ -150,5 +158,110 @@ section {
 
     .home-content > div:nth-child(3) {
         display: none;
+    }
+}
+
+.title-section {
+    height: fit-content;
+    background: var(--black-color);
+    margin: 0;
+    text-align: center;
+    color: var(--light-color);
+    font-size: 3vw;
+}
+
+.title-abt {
+    margin-top: 100vh;
+    border-radius: 100px 100px 0 0;
+}
+
+.title-section > h1 {
+    font-family: "Michroma", sans-serif;
+    padding-top: 20px;
+}
+
+@media all and (max-width: 768px) {
+    .title-abt {
+        border-radius: 30px 30px 0 0;
+    }
+
+    .title-section {
+        font-size: 4vw;
+    }
+}
+
+
+/*about-page*/
+.about {
+    display: flex;
+    flex-direction: row;
+    background: var(--black-color);
+    color: var(--light-color);
+}
+
+.about > div {
+    flex: 1;
+}
+
+.about > .left {
+    text-align: center;
+}
+
+.about > .left > .img-frame img {
+    height: 50vh;
+    margin-top: 20vh;
+}
+
+.about > .right {
+    padding-top: 20vh;
+}
+
+.about > .navbar-btn {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 50%;
+    background: var(--light-color);
+    cursor: pointer;
+    display: none;
+    z-index: 1000;
+}
+
+.about > .navbar-btn > div {
+    width: 35px;
+    height: 5px;
+    background: var(--black-color);
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.education > h2 {
+    padding: 20px 0;
+}
+
+.education > ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+@media all and (max-width: 768px) {
+    .about {
+        flex-direction: column;
+        font-size: 1rem;
+    }
+
+    .about > div {
+        flex: none;
+    }
+
+    .about > .left > .img-frame img {
+        margin-top: 5vh;
+    }
+
+    .about > .right {
+        padding-top: 20px;
     }
 }
