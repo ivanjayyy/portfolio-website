@@ -613,3 +613,30 @@ section {
         margin-bottom: 25px;
     }
 }
+
+
+/*footer*/
+.footer {
+    display: flex;
+    padding: 0 5vw;
+    flex-direction: row;
+    height: 25vh;
+    background: var(--black-color);
+    color: var(--light-color);
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer div {
+    flex: 1;
+}
+
+.footer ul {
+    list-style: none;
+}
+
+.footer h3 {
+    width: 30vw;
+    border-bottom: 1px solid var(--light-color);
+    font-weight: normal;
+}
