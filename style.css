@@ -482,7 +482,7 @@ section {
     border-radius: 20px;
     border: none;
     background: var(--light-color);
-    color: var(--black-color);
+    color: #3a3a3a;
 }
 
 @media all and (max-width: 768px) {
@@ -524,5 +524,92 @@ section {
 
     .project-btn {
         font-size: 1.2rem;
+    }
+}
+
+
+/*assignments*/
+.assignments {
+    background: var(--black-color);
+    border-radius: 0 0 100px 100px;
+}
+
+
+/*contact*/
+.contact {
+    background: var(--light-color);
+    color: var(--dark-color);
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    /*border: 1px solid transparent;*/
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-form h2 {
+    margin-bottom: 50px;
+    font-size: 5vw;
+    color: var(--black-color);
+    font-family: "Michroma", sans-serif;
+}
+
+.contact-form input {
+    width: 25vw;
+    margin: 15px 0;
+    height: 5vh;
+    padding: 5px;
+    border: 1px solid var(--black-color);
+    border-radius: 10px;
+    background: transparent;
+    color: var(--dark-color);
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contact-form textarea {
+    width: 25vw;
+    margin: 15px 0;
+    height: 30vh;
+    padding: 5px;
+    border: 1px solid var(--black-color);
+    border-radius: 10px;
+    background: transparent;
+    font-size: 20px;
+    color: var(--dark-color);
+    font-family: 'Poppins', sans-serif;
+}
+
+.submit-btn {
+    margin-top: 10px;
+    height: 50px;
+    width: 200px;
+    font-size: 20px;
+    border-radius: 10px;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    background: var(--black-color);
+    color: var(--light-color);
+    cursor: pointer;
+}
+
+@media all and (max-width: 768px) {
+    .contact-form input {
+        width: 50vw;
+    }
+
+    .contact-form textarea {
+        width: 50vw;
+    }
+
+    .contact-form h2 {
+        margin-bottom: 25px;
     }
 }
