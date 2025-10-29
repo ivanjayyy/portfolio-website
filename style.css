@@ -76,11 +76,12 @@ section {
 
 /*home-page*/
 .home {
-    height: 95vh;
+    height: 100vh;
+    background: var(--light-color);
     font-size: 1.5rem;
     position: fixed;
-    padding: 0;
-    top: 8vh;
+    padding: 8vh 0 0;
+    top: 0;
     left: 5vw;
     right: 5vw;
     margin: auto;
@@ -117,7 +118,7 @@ section {
     border-radius: 50px;
     text-align: center;
     font-weight: 500;
-    padding-top: 6px;
+    padding-top: 10px;
 }
 
 .home-content > div:nth-child(2) {
@@ -130,15 +131,6 @@ section {
     max-width: 350px;
     object-fit: cover;
 }
-
-/*@keyframes homeVisible {*/
-/*    from {*/
-/*        opacity: 1;*/
-/*    }*/
-/*    to {*/
-/*        opacity: 0;*/
-/*    }*/
-/*}*/
 
 @media all and (max-width: 768px) {
     .home {
@@ -238,12 +230,14 @@ section {
     border-radius: 50%;
     background: var(--light-color);
     cursor: pointer;
+    display: none;
     z-index: 1000;
     transition: 0.4s;
 }
 
 .about > .navbar-btn.active {
     background: var(--dark-color);
+    padding: 10px 10px 10px 20px;
 }
 
 .about > .navbar-btn > div {
@@ -256,6 +250,14 @@ section {
 
 .about > .navbar-btn.active > div {
     background: var(--light-color);
+}
+
+.about > .navbar-btn.active div:nth-child(1) {
+    transform: rotate(-45deg) translate(-8px, 0px);
+}
+
+.about > .navbar-btn.active div:nth-child(2) {
+    transform: rotate(45deg) translate(-8px, 0px);
 }
 
 .about .nav-menu {
@@ -518,7 +520,7 @@ section {
 /*projects*/
 .projects {
     display: flex;
-    padding: 10px 5vw 0;
+    padding: 10px 5vw 100px;
     height: 300vh;
     font-size: 20rem;
     font-family: 'Poppins', sans-serif;
@@ -574,6 +576,7 @@ section {
     border: none;
     background: var(--light-color);
     color: #3a3a3a;
+    cursor: pointer;
 }
 
 @media all and (max-width: 768px) {
@@ -621,8 +624,101 @@ section {
 
 /*assignments*/
 .assignments {
+    padding: 0;
     background: var(--black-color);
     border-radius: 0 0 100px 100px;
+    width: 100%;
+    height: 300vh;
+    display: flex;
+    color: var(--light-color);
+}
+
+.assignments > div {
+    height: 100vh;
+    flex-basis: 50%;
+    position: sticky;
+    top: 0;
+}
+
+.assignments .left {
+    padding: 20vh 10vw;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.assignments .left > h4 {
+    font-size: 4vw;
+}
+
+.assignments .left > p {
+    font-size: 1.5rem;
+    color: #8e8e8e;
+}
+
+.assignments .card {
+    height: 60vh;
+    aspect-ratio: 1/1;
+    border-radius: 25px;
+    background: #74b9ff;
+    position: absolute;
+    top: calc(50% - 30vh);
+    left: calc(30% - 30vh);
+    transition: 0.5s ease-in-out;
+}
+
+.assignments .card:nth-child(2) {
+    background: #ffeaa7;
+}
+
+.assignments .card:nth-child(3) {
+    background: #a29bfe;
+}
+
+.assignments .card:nth-child(4) {
+    background: #55efc4;
+}
+
+@media all and (max-width: 768px) {
+    .assignments {
+        border-radius: 0 0 30px 30px;
+        flex-direction: column-reverse;
+        height: 350vh;
+    }
+
+    .assignments .left {
+        padding: 200vh 5vw 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        height: 50vh;
+        text-align: center;
+    }
+
+    .assignments .left > h4 {
+        font-size: 5vw;
+    }
+
+    .assignments .left > p {
+        font-size: 1rem;
+    }
+
+    .assignments .right {
+        padding: 0 5vw;
+        height: 300vh;
+        top: 0;
+    }
+
+    .assignments .card {
+        width: 70vw;
+        height: 70vw;
+        top: 20vh;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
 }
 
 
@@ -634,6 +730,12 @@ section {
     height: 100vh;
     align-items: center;
     justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 5vw;
+    right: 5vw;
+    margin: auto;
+    z-index: -2000;
 }
 
 .contact-form {
@@ -694,14 +796,20 @@ section {
 @media all and (max-width: 768px) {
     .contact-form input {
         width: 50vw;
+        font-size: 1rem;
     }
 
     .contact-form textarea {
         width: 50vw;
+        font-size: 1rem;
     }
 
     .contact-form h2 {
         margin-bottom: 25px;
+    }
+
+    .submit-btn {
+        font-size: 1.1rem;
     }
 }
 
@@ -710,12 +818,15 @@ section {
 .footer {
     display: flex;
     padding: 0 5vw;
+    align-items: center;
+    justify-content: center;
     flex-direction: row;
     height: 25vh;
-    background: var(--black-color);
+    background: #3a3a3a;
     color: var(--light-color);
-    font-size: 20px;
+    font-size: 1.2rem;
     font-family: 'Poppins', sans-serif;
+    margin-top: 130vh;
 }
 
 .footer div {
@@ -724,10 +835,23 @@ section {
 
 .footer ul {
     list-style: none;
+    padding-top: 10px;
+
 }
 
 .footer h3 {
-    width: 30vw;
+    width: 25vw;
     border-bottom: 1px solid var(--light-color);
     font-weight: normal;
+}
+
+.footer a {
+    text-decoration: none;
+    color: var(--light-color);
+}
+
+@media all and (max-width: 768px) {
+    .footer {
+        font-size: 1rem;
+    }
 }
