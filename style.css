@@ -112,7 +112,7 @@ section {
 
 .contact-btn {
     background: #3a3a3a;
-    margin-top: 10px;
+    margin-top: 30px;
     width: 150px;
     height: 50px;
     border-radius: 50px;
@@ -130,6 +130,21 @@ section {
     max-height: 450px;
     max-width: 350px;
     object-fit: cover;
+}
+
+.home-content > div:nth-child(3) {
+    position: relative;
+}
+
+.home-socials {
+    font-size: 1.2rem;
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    font-weight: 400;
 }
 
 @media all and (max-width: 768px) {
@@ -325,7 +340,26 @@ section {
     gap: 10px;
 }
 
+.gallery-btn {
+    background: #3a3a3a;
+    margin-top: 40px;
+    width: 150px;
+    height: 50px;
+    border-radius: 20px;
+    text-align: center;
+    font-weight: 400;
+    padding-top: 10px;
+}
+
 @media all and (max-width: 768px) {
+    .gallery-btn {
+        font-size: 1.2rem;
+        height: 40px;
+        width: 120px;
+        margin-top: 20px;
+        margin-bottom: 50px;
+    }
+
     .about {
         flex-direction: column;
         font-size: 1rem;
@@ -522,7 +556,7 @@ section {
 .projects {
     display: flex;
     padding: 10px 5vw 100px;
-    height: 300vh;
+    min-height: 300vh;
     font-size: 20rem;
     font-family: 'Poppins', sans-serif;
     background: var(--black-color);
@@ -544,7 +578,8 @@ section {
 }
 
 .project {
-    height: 100vh;
+    min-height: 100vh;
+    padding-bottom: 50px;
 }
 
 .project-item {
@@ -871,4 +906,97 @@ section {
     padding: 0.5rem;
     border-radius: 4px;
     background-color: rgba(0, 0, 0, 0.05);
+}
+
+
+/*gallery*/
+.top-border {
+    height: fit-content;
+}
+
+.back-btn {
+    background: #3a3a3a;
+    width: 120px;
+    height: 50px;
+    border-radius: 20px;
+    text-align: center;
+    font-weight: 400;
+    margin: 20px;
+    padding-top: 10px;
+}
+
+.back-btn a {
+    text-decoration: none;
+    color: var(--light-color);
+}
+
+.gallery-title {
+    font-size: 6vw;
+    font-weight: 900;
+    font-family: "Michroma", sans-serif;
+    color: var(--black-color);
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.gallery {
+    padding: 0 10vw 50px;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.gallery .gallery-item {
+    width: 80vw;
+    height: fit-content;
+}
+
+.gallery .gallery-item .img-title {
+    border-bottom: 3px solid var(--dark-color);
+    width: fit-content;
+    margin-bottom: 20px;
+}
+
+.gallery .gallery-item .img-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.gallery .gallery-item .img-container img {
+    width: 25vw;
+}
+
+@media all and (max-width: 768px) {
+    .back-btn {
+        font-size: 1.2rem;
+        height: 40px;
+        width: 100px;
+    }
+
+    .gallery-title {
+        font-size: 9vw;
+    }
+
+    .gallery {
+        padding: 0 5vw 30px;
+    }
+
+    .gallery .gallery-item .img-title {
+        font-size: 1.3rem;
+    }
+
+    .gallery .gallery-item .img-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 20px;
+    }
+
+    .gallery .gallery-item .img-container img {
+        width: 60vw;
+    }
 }
