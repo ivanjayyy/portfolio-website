@@ -30,11 +30,11 @@ window.addEventListener('scroll', () => {
 
     if (scrollY >= elementTop) {
         navBtn.style.display = 'block';
-        contactPage.style.zIndex = '-500';
+        // contactPage.style.zIndex = '-500';
     } else {
         navBtn.style.display = 'none';
         navMenu.classList.remove('active');
-        contactPage.style.zIndex = '-2000';
+        // contactPage.style.zIndex = '-2000';
     }
 });
 
@@ -74,3 +74,54 @@ window.addEventListener("scroll", () => {
 
     rotateCards();
 })
+
+// email submission
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('contactForm');
+    const status = document.getElementById('formStatus');
+
+    if (!form || !status) return;
+
+    form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+
+        const submitBtn = form.querySelector('.submit-btn');
+        const originalText = submitBtn.textContent;
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending...';
+        status.innerHTML = ''; // Clear previous messages
+
+        try {
+            const formData = new FormData(form);
+
+            const response = await fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if (response.ok) {
+                status.innerHTML = '<p style="color: #4ade80; margin-top: 1rem;">Message sent successfully! I’ll get back to you soon.</p>';
+
+                form.reset();
+
+                form.querySelectorAll('input, textarea').forEach(field => {
+                    field.value = '';
+                });
+            } else {
+                const data = await response.json();
+                throw new Error(data.error || 'Failed to send message.');
+            }
+
+        } catch (error) {
+            status.innerHTML = `<p style="color: #f87171; margin-top: 1rem;">${error.message || 'Something went wrong. Please try again.'}</p>`;
+
+        } finally {
+            submitBtn.disabled = false;
+            submitBtn.textContent = originalText;
+        }
+    });
+});

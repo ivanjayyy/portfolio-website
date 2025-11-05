@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Portfolio</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,7 +23,7 @@
             <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#projects">Works</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#contact">Gallery</a></li>
         </ul>
     </nav>
 </header>
@@ -69,8 +70,8 @@
             <h2>EDUCATION</h2>
 
             <ul type="square">
-                <li>2014-2023 : R/Sivali Central College</li>
-                <li>2024-2026 : IJSE Institute, Panadura</li>
+                <li>2014-2023 : R/<a href="https://sivalicc.lk/">Sivali</a> Central College</li>
+                <li>2024-2026 : <a href="https://www.ijse.lk/">IJSE</a> Institute, Panadura</li>
             </ul>
         </div>
     </div>
@@ -92,10 +93,10 @@
         </nav>
 
         <div class="socials-container">
-            <a class="socials">GITHUB</a>
+            <a class="socials" href="https://github.com/ivanjayyy">GITHUB</a>
             <a class="socials">LINKEDIN</a>
-            <a class="socials">FACEBOOK</a>
-            <a class="socials">TWITTER</a>
+            <a class="socials" href="https://web.facebook.com/ivan.jayasooriya">FACEBOOK</a>
+            <a class="socials" href="https://x.com/Clumzy2003">TWITTER</a>
         </div>
     </div>
 </section>
@@ -245,14 +246,16 @@
 
 <!--contact-->
 <section class="contact" id="contact">
-    <form class="contact-form">
+    <form class="contact-form" id="contactForm" action="https://formspree.io/f/mblpnjke" method="POST">
         <h2>Let's Make It Happen</h2>
 
-        <input type="text" placeholder="Drop a name">
-        <input type="email" placeholder="Wanna hear back? Add your email">
-        <textarea name="" id="" placeholder="Say hello or drop a note. . ." rows="5"></textarea>
+        <input type="text" name="name" placeholder="Drop a name" required>
+        <input type="email" name="email" placeholder="Wanna hear back? Add your email" required>
+        <textarea name="message" placeholder="Say hello or drop a note. . ." rows="5" required></textarea>
 
         <button type="submit" class="submit-btn">Send Message</button>
+
+        <div class="form-status" id="formStatus"></div>
     </form>
 </section>
 
@@ -274,10 +277,10 @@
         <h3>Socials</h3>
 
         <ul>
-            <li><a href="#">Github</a></li>
+            <li><a href="https://github.com/ivanjayyy">Github</a></li>
             <li><a href="#">Linkedin</a></li>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Twitter</a></li>
+            <li><a href="https://web.facebook.com/ivan.jayasooriya">Facebook</a></li>
+            <li><a href="https://x.com/Clumzy2003">Twitter</a></li>
         </ul>
     </div>
 
