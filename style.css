@@ -305,6 +305,25 @@ section {
     transition: 0.4s;
 }
 
+.about > .go-up-btn {
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    border-radius: 20px;
+    bottom: 0;
+    right: 0;
+    margin: 50px;
+    width: 50px;
+    height: 50px;
+    background: var(--dark-color);
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    z-index: 5000;
+}
+
 .about > .navbar-btn.active {
     background: var(--dark-color);
     padding: 10px 10px 10px 20px;
@@ -433,6 +452,8 @@ section {
 
     .about > .left > .img-frame img {
         margin-top: 5vh;
+        height: 50vh;
+        width: fit-content;
     }
 
     .about > .right {
@@ -1148,6 +1169,7 @@ section {
 
     .gallery-title {
         font-size: 9vw;
+        font-weight: 900;
     }
 
     .gallery {

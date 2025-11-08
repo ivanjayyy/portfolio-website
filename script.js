@@ -3,6 +3,7 @@ const navBtn = document.getElementById('navBtn');
 const navMenu = document.getElementById('navMenu');
 const navItems = document.querySelectorAll('.nav-item');
 const contactPage = document.getElementById('contact');
+const upBtn = document.getElementsByClassName('go-up-btn')[0];
 
 navBtn.addEventListener('click', function() {
     navBtn.classList.toggle('active');
@@ -30,9 +31,11 @@ window.addEventListener('scroll', () => {
 
     if (scrollY >= elementTop) {
         navBtn.style.display = 'block';
+        upBtn.style.display = 'flex';
         // contactPage.style.zIndex = '-500';
     } else {
         navBtn.style.display = 'none';
+        upBtn.style.display = 'none';
         navMenu.classList.remove('active');
         // contactPage.style.zIndex = '-2000';
     }
