@@ -20,39 +20,56 @@
     </div>
 </div>
 
-<div class="gallery-title">MEMORIES</div>
+<div class="gallery-title hidden-up">MEMORIES</div>
 
 <section class="gallery">
     <div class="gallery-item">
-        <div class="img-title">First Semester Finale</div>
+        <div class="img-title hidden-right">First Semester Finale</div>
 
         <div class="img-container">
-            <img src="images/projects/project1.png" alt="">
-            <img src="images/projects/project1.png" alt="">
-            <img src="images/projects/project1.png" alt="">
+            <img class="hidden-left" src="images/projects/project1.png" alt="">
+            <img class="hidden-left" src="images/projects/project1.png" alt="">
+            <img class="hidden-left" src="images/projects/project1.png" alt="">
         </div>
     </div>
 
     <div class="gallery-item">
-        <div class="img-title">GDSE73 Batch Trip - 2025</div>
+        <div class="img-title hidden-right">GDSE73 Batch Trip - 2025</div>
 
         <div class="img-container">
-            <img src="images/projects/project1.png" alt="">
-            <img src="images/projects/project1.png" alt="">
-            <img src="images/projects/project1.png" alt="">
+            <img class="hidden-left" src="images/projects/project1.png" alt="">
+            <img class="hidden-left" src="images/projects/project1.png" alt="">
+            <img class="hidden-left" src="images/projects/project1.png" alt="">
         </div>
     </div>
 
     <div class="gallery-item">
-        <div class="img-title">Lecture Days</div>
+        <div class="img-title hidden-right">Lecture Days</div>
 
         <div class="img-container">
-            <img src="images/projects/project1.png" alt="">
-            <img src="images/projects/project1.png" alt="">
-            <img src="images/projects/project1.png" alt="">
+            <img class="hidden-left" src="images/projects/project1.png" alt="">
+            <img class="hidden-left" src="images/projects/project1.png" alt="">
+            <img class="hidden-left" src="images/projects/project1.png" alt="">
         </div>
     </div>
 </section>
+
+<script>
+    // animation
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+
+            } else {
+                entry.target.classList.remove('show');
+            }
+        });
+    });
+
+    const hiddenElements = document.querySelectorAll('.hidden-up, .hidden-left, .hidden-right, .hidden-down');
+    hiddenElements.forEach((element) => observer.observe(element));
+</script>
 
 </body>
 </html>

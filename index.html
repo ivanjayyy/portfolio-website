@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<!--    <link rel="stylesheet" href="assets/lib/normalize.css">-->
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -15,72 +16,78 @@
 
 <!--header-->
 <header class="header" id="home">
-    <div class="logo">Web Developer & Designer</div>
+    <div class="logo hidden-down">Web Developer & Designer</div>
 
     <!--    navigation-bar-->
-    <nav>
-        <ul class="nav-bar">
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#projects">Works</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-        </ul>
+    <nav  class="nav-bar">
+        <a class="hidden-down" href="#about">About</a>
+        <a class="hidden-down" href="#services">Services</a>
+        <a class="hidden-down" href="#projects">Works</a>
+        <a class="hidden-down" href="gallery.html">Gallery</a>
     </nav>
+<!--    <nav>-->
+<!--        <ul class="nav-bar">-->
+<!--            <li><a class="hidden-down" href="#about">About</a></li>-->
+<!--            <li><a class="hidden-down" href="#services">Services</a></li>-->
+<!--            <li><a class="hidden-down" href="#projects">Works</a></li>-->
+<!--            <li><a class="hidden-down" href="gallery.html">Gallery</a></li>-->
+<!--        </ul>-->
+<!--    </nav>-->
 </header>
 
 <!--home-page-->
 <section class="home">
-    <div class="my-name">IVAN JAY</div>
+    <div class="my-name hidden-up">IVAN JAY</div>
 
     <div class="home-content">
         <div>
-            <p>Open to job opportunities worldwide. Passionate about building polished, intuitive, and thoughtful digital experiences that leave a mark.</p>
+            <p class="hidden-right">Open to job opportunities worldwide. Passionate about building polished, intuitive, and thoughtful digital experiences that leave a mark.</p>
 
-            <div class="contact-btn">
+            <div class="contact-btn hidden-right">
                 <a style="color: white" href="#contact">Contact</a>
             </div>
         </div>
 
         <div>
-            <img class="home-img" src="images/hero-img.jpg" alt="">
+            <img class="home-img hidden-up" src="images/hero-img.jpg" alt="">
         </div>
 
         <div>
             <div class="home-socials">
-                <a class="socials" href="https://github.com/ivanjayyy" target="_blank" rel="noopener noreferrer">GITHUB</a>
-                <a class="socials" target="_blank" rel="noopener noreferrer">LINKEDIN</a>
-                <a class="socials" href="https://web.facebook.com/ivan.jayasooriya" target="_blank" rel="noopener noreferrer">FACEBOOK</a>
-                <a class="socials" href="https://x.com/Clumzy2003" target="_blank" rel="noopener noreferrer">TWITTER</a>
+                <a class="socials hidden-left" href="https://github.com/ivanjayyy" target="_blank" rel="noopener noreferrer">GITHUB</a>
+                <a class="socials hidden-left" target="_blank" rel="noopener noreferrer">LINKEDIN</a>
+                <a class="socials hidden-left" href="https://web.facebook.com/ivan.jayasooriya" target="_blank" rel="noopener noreferrer">FACEBOOK</a>
+                <a class="socials hidden-left" href="https://x.com/Clumzy2003" target="_blank" rel="noopener noreferrer">TWITTER</a>
             </div>
         </div>
     </div>
 </section>
 
 <div class="title-abt title-section">
-    <h1>WHO I AM</h1>
+    <h1 class="hidden-up">WHO I AM</h1>
 </div>
 
 <!--about-page-->
 <section class="about" id="about">
     <div class="left">
-        <div class="img-frame">
+        <div class="img-frame hidden-right">
             <img src="images/about-img.jpg" alt="img">
         </div>
     </div>
 
     <div class="right">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquam atque aut consequatur dignissimos est et eveniet iste magni modi molestias non omnis praesentium quas, quos repellat repellendus sequi unde!</p>
+        <p class="hidden-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquam atque aut consequatur dignissimos est et eveniet iste magni modi molestias non omnis praesentium quas, quos repellat repellendus sequi unde!</p>
 
         <div class="education">
-            <h2>EDUCATION</h2>
+            <h2 class="hidden-up">EDUCATION</h2>
 
             <ul type="square">
-                <li>2014-2023 : R/<a href="https://sivalicc.lk/">Sivali</a> Central College</li>
-                <li>2024-2026 : <a href="https://www.ijse.lk/">IJSE</a> Institute, Panadura</li>
+                <li class="hidden-left">2014-2023 : R/<a href="https://sivalicc.lk/">Sivali</a> Central College</li>
+                <li class="hidden-left">2024-2026 : <a href="https://www.ijse.lk/">IJSE</a> Institute, Panadura</li>
             </ul>
         </div>
 
-        <div class="gallery-btn">
+        <div class="gallery-btn hidden-up">
             <a style="color: white" href="gallery.html">Gallery</a>
         </div>
     </div>
@@ -111,7 +118,7 @@
 </section>
 
 <div class="title-section" id="skills">
-    <h1>SKILLS</h1>
+    <h1 class="hidden-up">SKILLS</h1>
 </div>
 
 <!--skills-->
@@ -156,29 +163,29 @@
 </section>
 
 <div class="title-section">
-    <h1>WHAT I DO</h1>
+    <h1 class="hidden-up">WHAT I DO</h1>
 </div>
 
 <!--services-->
 <section class="services" id="services">
     <div class="service-item">
-        <div class="service-title">1. Frontend Design</div>
-        <p class="service-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate deserunt laborum nihil placeat possimus quae sapiente sit unde! Atque, neque, reiciendis! Cum esse harum libero modi neque quaerat tempora tempore!</p>
+        <div class="service-title hidden-right">1. Frontend Design</div>
+        <p class="service-desc hidden-up">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate deserunt laborum nihil placeat possimus quae sapiente sit unde! Atque, neque, reiciendis! Cum esse harum libero modi neque quaerat tempora tempore!</p>
     </div>
 
     <div class="service-item">
-        <div class="service-title">2. Backend Design</div>
-        <p class="service-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci atque commodi doloribus eum eveniet exercitationem facere labore, maiores minima neque nihil odio, officiis quod rerum, sapiente sequi suscipit veniam voluptate!</p>
+        <div class="service-title hidden-right">2. Backend Design</div>
+        <p class="service-desc hidden-up">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci atque commodi doloribus eum eveniet exercitationem facere labore, maiores minima neque nihil odio, officiis quod rerum, sapiente sequi suscipit veniam voluptate!</p>
     </div>
 
     <div class="service-item">
-        <div class="service-title">3. UI/UX Design</div>
-        <p class="service-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque beatae blanditiis commodi consequatur, delectus deserunt dolores est excepturi magnam modi, nihil nulla officiis omnis quasi quibusdam quisquam rerum ullam ut.</p>
+        <div class="service-title hidden-right">3. UI/UX Design</div>
+        <p class="service-desc hidden-up">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque beatae blanditiis commodi consequatur, delectus deserunt dolores est excepturi magnam modi, nihil nulla officiis omnis quasi quibusdam quisquam rerum ullam ut.</p>
     </div>
 </section>
 
 <div class="title-section">
-    <h1>MY WORK</h1>
+    <h1 class="hidden-up">MY WORK</h1>
 </div>
 
 <!--projects-->
@@ -192,11 +199,11 @@
             <div class="project-no">1.</div>
 
             <div class="project-item">
-                <img src="images/projects/project1.png" alt="project1">
-                <p class="project-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aut culpa
+                <img class="hidden-left" src="images/projects/project1.png" alt="project1">
+                <p class="project-desc hidden-up">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aut culpa
                     dolor, dolorum eligendi id laborum libero magnam neque nesciunt non officia perferendis quidem quo
                     rem vel veniam? Quam, sunt?</p>
-                <button class="project-btn">see more</button>
+                <button class="project-btn hidden-up">see more</button>
             </div>
         </div>
 
@@ -204,11 +211,11 @@
             <div class="project-no">2.</div>
 
             <div class="project-item">
-                <img src="images/projects/project2.png" alt="project1">
-                <p class="project-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aut culpa
+                <img class="hidden-left" src="images/projects/project2.png" alt="project1">
+                <p class="project-desc hidden-up">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aut culpa
                     dolor, dolorum eligendi id laborum libero magnam neque nesciunt non officia perferendis quidem quo
                     rem vel veniam? Quam, sunt?</p>
-                <button class="project-btn">see more</button>
+                <button class="project-btn hidden-up">see more</button>
             </div>
         </div>
 
@@ -216,28 +223,28 @@
             <div class="project-no">3.</div>
 
             <div class="project-item">
-                <img src="images/projects/project3.png" alt="project1">
-                <p class="project-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aut culpa
+                <img class="hidden-left" src="images/projects/project3.png" alt="project1">
+                <p class="project-desc hidden-up">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid aut culpa
                     dolor, dolorum eligendi id laborum libero magnam neque nesciunt non officia perferendis quidem quo
                     rem vel veniam? Quam, sunt?</p>
-                <button class="project-btn">see more</button>
+                <button class="project-btn hidden-up">see more</button>
             </div>
         </div>
     </div>
 </section>
 
 <div class="title-section">
-    <h1>ASSIGNMENTS</h1>
+    <h1 class="hidden-up">ASSIGNMENTS</h1>
 </div>
 
 <!--assignments-->
 <section class="assignments" id="assignments">
     <div class="left">
-        <h4>Here are some of my selected Assignments.</h4>
+        <h4 class="hidden-right">Here are some of my selected Assignments.</h4>
 
-        <p>If you want to check them out, feel free to peek into my GitHub Account.</p>
+        <p class="hidden-right">If you want to check them out, feel free to peek into my GitHub Account.</p>
 
-        <div class="gallery-btn">
+        <div class="gallery-btn hidden-right">
             <a style="color: white" href="https://github.com/ivanjayyy/css-assignment-02.git">CHECK</a>
         </div>
     </div>
@@ -256,13 +263,13 @@
 <!--contact-->
 <section class="contact" id="contact">
     <form class="contact-form" id="contactForm" action="https://formspree.io/f/mblpnjke" method="POST">
-        <h2>Let's Make It Happen</h2>
+        <h2 class="hidden-down">Let's Make It Happen</h2>
 
-        <input type="text" name="name" placeholder="Drop a name" required>
-        <input type="email" name="email" placeholder="Wanna hear back? Add your email" required>
-        <textarea name="message" placeholder="Say hello or drop a note. . ." rows="5" required></textarea>
+        <input class="hidden-up" type="text" name="name" placeholder="Drop a name" required>
+        <input class="hidden-up" type="email" name="email" placeholder="Wanna hear back? Add your email" required>
+        <textarea class="hidden-up" name="message" placeholder="Say hello or drop a note. . ." rows="5" required></textarea>
 
-        <button type="submit" class="submit-btn">Send Message</button>
+        <button type="submit" class="submit-btn hidden-up">Send Message</button>
 
         <div class="form-status" id="formStatus"></div>
     </form>

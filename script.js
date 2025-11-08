@@ -73,7 +73,7 @@ window.addEventListener("scroll", () => {
     }
 
     rotateCards();
-})
+});
 
 // email submission
 document.addEventListener('DOMContentLoaded', function () {
@@ -125,3 +125,18 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
+// animation
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+
+        } else {
+            entry.target.classList.remove('show');
+        }
+    });
+});
+
+const hiddenElements = document.querySelectorAll('.hidden-up, .hidden-left, .hidden-right, .hidden-down');
+hiddenElements.forEach((element) => observer.observe(element));
