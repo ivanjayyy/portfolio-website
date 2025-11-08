@@ -218,6 +218,20 @@ section {
     }
 }
 
+@media all and (max-width: 1440px) {
+    .home-socials {
+        flex-direction: column;
+        text-align: right;
+        gap: 1rem;
+    }
+}
+
+@media all and (max-width: 1024px) {
+    .home-content > div:nth-child(2) {
+        display: none;
+    }
+}
+
 
 .title-section {
     height: fit-content;
@@ -448,6 +462,13 @@ section {
 @media all and (max-width: 425px) {
     .about > .left > .img-frame img {
         width: 80vw;
+        height: fit-content;
+    }
+}
+
+@media all and (max-width: 1024px) {
+    .about > .left > .img-frame img {
+        width: 30vw;
         height: fit-content;
     }
 }
@@ -735,6 +756,23 @@ section {
     }
 }
 
+@media all and (max-width: 1440px) {
+    .project-item {
+        margin-left: 300px;
+    }
+}
+
+@media all and (max-width: 1024px) {
+    .project-item img {
+        width: 100%;
+        height: fit-content;
+    }
+
+    .project-item {
+        width: 50%;
+    }
+}
+
 
 /*assignments*/
 .assignments {
@@ -828,6 +866,17 @@ section {
     .assignments .card {
         width: 70vw;
         height: 70vw;
+        top: 20vh;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+}
+
+@media all and (max-width: 1024px) {
+    .assignments .card {
+        width: 30vw;
+        height: 30vw;
         top: 20vh;
         left: 0;
         right: 0;
@@ -937,6 +986,16 @@ section {
     .contact-form textarea {
         width: 70vw;
         font-size: 0.8rem;
+    }
+}
+
+@media all and (max-width: 1440px) {
+    .contact-form input {
+        width: 40vw;
+    }
+
+    .contact-form textarea {
+        width: 40vw;
     }
 }
 
