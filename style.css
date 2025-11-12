@@ -1146,6 +1146,7 @@ section {
 
 .gallery .gallery-item .img-container img {
     width: 25vw;
+    background: var(--dark-color);
 }
 
 .gallery .gallery-item .img-container img:nth-child(2) {
