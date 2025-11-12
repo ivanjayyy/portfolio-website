@@ -91,19 +91,30 @@ section {
     padding: 0 10vw;
 }
 
+/*loading-screen*/
+#pre-loader {
+    width: 100%;
+    height: 100%;
+    background: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#pre-loader img {
+    width: 100px;
+    aspect-ratio: 1/1;
+    rotate: 45deg;
+}
 
 /*home-page*/
 .home {
     background: var(--light-color);
     font-size: 1.5rem;
     padding: 0 5vw;
-    /*position: fixed;*/
-    /*padding: 8vh 0 0;*/
-    /*top: 0;*/
-    /*left: 5vw;*/
-    /*right: 5vw;*/
-    /*margin: auto;*/
-    /*z-index: -1000;*/
 }
 
 .my-name {
@@ -243,7 +254,6 @@ section {
 }
 
 .title-abt {
-    /*margin-top: 100vh;*/
     border-radius: 100px 100px 0 0;
 }
 
@@ -321,7 +331,7 @@ section {
     color: white;
     cursor: pointer;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-    z-index: 5000;
+    z-index: 500;
 }
 
 .about > .navbar-btn.active {
@@ -487,12 +497,12 @@ section {
     }
 }
 
-@media all and (max-width: 1024px) {
-    .about > .left > .img-frame img {
-        width: 30vw;
-        height: fit-content;
-    }
-}
+/*@media all and (max-width: 1024px) {*/
+/*    .about > .left > .img-frame img {*/
+/*        width: 30vw;*/
+/*        height: fit-content;*/
+/*    }*/
+/*}*/
 
 
 /*skills*/
@@ -726,7 +736,7 @@ section {
     cursor: pointer;
 }
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 1024px) {
     .projects {
         padding: 0 5vw;
     }
@@ -756,7 +766,7 @@ section {
     }
 
     .project-item img {
-        width: 90vw;
+        width: 60vw;
         height: fit-content;
     }
 
@@ -777,20 +787,9 @@ section {
     }
 }
 
-@media all and (max-width: 1440px) {
-    .project-item {
-        margin-left: 300px;
-    }
-}
-
-@media all and (max-width: 1024px) {
+@media all and (max-width: 768px) {
     .project-item img {
-        width: 100%;
-        height: fit-content;
-    }
-
-    .project-item {
-        width: 50%;
+        width: 90vw;
     }
 }
 
@@ -833,23 +832,38 @@ section {
     height: 60vh;
     aspect-ratio: 1/1;
     border-radius: 25px;
-    background: #74b9ff;
     position: absolute;
     top: calc(50% - 30vh);
     left: calc(30% - 30vh);
     transition: 0.5s ease-in-out;
 }
 
+.assignments .card:nth-child(1) {
+    background-image: url('images/assignments/ezgif-52964fffb8e7004c.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .assignments .card:nth-child(2) {
-    background: #ffeaa7;
+    background-image: url('images/assignments/ezgif-510b4b7c946f6495.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .assignments .card:nth-child(3) {
-    background: #a29bfe;
+    background-image: url('images/assignments/ezgif-12c80f4490d2e0c3.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .assignments .card:nth-child(4) {
-    background: #55efc4;
+    background-image: url('images/assignments/ezgif-10ca836eaa45bb50.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 @media all and (max-width: 768px) {
@@ -894,17 +908,6 @@ section {
     }
 }
 
-@media all and (max-width: 1024px) {
-    .assignments .card {
-        width: 30vw;
-        height: 30vw;
-        top: 20vh;
-        left: 0;
-        right: 0;
-        margin: auto;
-    }
-}
-
 
 /*contact*/
 .contact {
@@ -915,12 +918,6 @@ section {
     align-items: center;
     justify-content: center;
     padding: 0 5vw;
-    /*position: fixed;*/
-    /*top: 0;*/
-    /*left: 5vw;*/
-    /*right: 5vw;*/
-    /*margin: auto;*/
-    /*z-index: -2000;*/
 }
 
 .contact-form {
@@ -1033,7 +1030,6 @@ section {
     color: var(--light-color);
     font-size: 1.2rem;
     font-family: 'Poppins', sans-serif;
-    /*margin-top: 130vh;*/
 }
 
 .footer div {
@@ -1249,4 +1245,12 @@ section {
     opacity: 1;
     filter: blur(0);
     transform: translateX(0);
+}
+
+.hovering {
+    transition: transform 0.5s ease, scale 0.3s ease;
+}
+
+.hovering:hover {
+    transform: scale(1.1) translateY(-3px);
 }
