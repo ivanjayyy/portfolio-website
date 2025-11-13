@@ -130,11 +130,11 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // loading screen
-// const loadingScreen = document.getElementById('pre-loader');
-//
-// window.addEventListener('load', function () {
-//     loadingScreen.style.display = 'none';
-// })
+const loadingScreen = document.getElementById('pre-loader');
+
+window.addEventListener('load', function () {
+    loadingScreen.style.display = 'none';
+})
 
 // animation
 const observer = new IntersectionObserver((entries) => {
