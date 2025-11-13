@@ -14,6 +14,11 @@
 
 <body>
 
+<!--loading screen-->
+<div id="pre-loader">
+    <img src="images/loading.gif" alt="" loading="lazy">
+</div>
+
 <div class="top-border">
     <div class="back-btn">
         <a href="index.html">Back</a>
@@ -27,9 +32,9 @@
         <div class="img-title hidden-right">First Semester Finale</div>
 
         <div class="img-container">
-            <img class="hidden-left" src="images/1st sem final/IMG-20241222-WA0025~3.jpg" alt="" loading="lazy">
-            <img class="hidden-left" src="images/1st sem final/IMG-20250203-WA0068~2.jpg" alt="" loading="lazy">
-            <img class="hidden-left" src="images/1st sem final/IMG-20250626-WA0067~3(1).jpg" alt="" loading="lazy">
+            <img class="hidden-left" src="images/1st sem final/IMG-20241222-WA0025~3.jpg" alt="">
+            <img class="hidden-left" src="images/1st sem final/IMG-20250203-WA0068~2.jpg" alt="">
+            <img class="hidden-left" src="images/1st sem final/IMG-20250626-WA0067~3(1).jpg" alt="">
         </div>
     </div>
 
@@ -37,9 +42,9 @@
         <div class="img-title hidden-right">GDSE73 Batch Trip - 2025</div>
 
         <div class="img-container">
-            <img class="hidden-left" src="images/trip/IMG-20250715-WA0017(1)~2(1).jpg" alt="" loading="lazy">
-            <img class="hidden-left" src="images/trip/IMG_20250716_044215_726~4(1).jpg" alt="" loading="lazy">
-            <img class="hidden-left" src="images/trip/IMG_20251112_164006_038~2.jpg" alt="" loading="lazy">
+            <img class="hidden-left" src="images/trip/IMG-20250715-WA0017(1)~2(1).jpg" alt="">
+            <img class="hidden-left" src="images/trip/IMG_20250716_044215_726~4(1).jpg" alt="">
+            <img class="hidden-left" src="images/trip/IMG_20251112_164006_038~2.jpg" alt="">
         </div>
     </div>
 
@@ -47,14 +52,21 @@
         <div class="img-title hidden-right">Lecture Days</div>
 
         <div class="img-container">
-            <img class="hidden-left" src="images/lec days/IMG-20250203-WA0036~2.jpg" alt="" loading="lazy">
-            <img class="hidden-left" src="images/lec days/IMG-20250203-WA0042~3.jpg" alt="" loading="lazy">
-            <img class="hidden-left" src="images/lec days/IMG-20250825-WA0015~2(1).jpg" alt="" loading="lazy">
+            <img class="hidden-left" src="images/lec days/IMG-20250203-WA0036~2.jpg" alt="">
+            <img class="hidden-left" src="images/lec days/IMG-20250203-WA0042~3.jpg" alt="">
+            <img class="hidden-left" src="images/lec days/IMG-20250825-WA0015~2(1).jpg" alt="">
         </div>
     </div>
 </section>
 
 <script>
+    // loading screen
+    const loadingScreen = document.getElementById('pre-loader');
+
+    window.addEventListener('load', function () {
+        loadingScreen.style.display = 'none';
+    })
+
     // animation
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
